@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <style>
+        .NY{
+            margin: 0 auto;
+            width: 1000px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="NY">
+        <img src="images/农业1.jpg" id="N">
+       
+    </div>
+    <button type="button" id="bt1" onclick="b()">上一个</button>
+    <button type="button" id="bt2" onclick="a()">下一个</button>
+    <script>
+        var abc = document.getElementById("N");
+        var bcd = [];
+        for (var i = 1; i <= 10; i++) {
+            bcd.push("images/农业" + i + ".jpg");
+        }
+        var n = 1;
+        function a() {
+            n++;
+            if (n > 10){
+                n=1
+            }
+                abc.src = bcd[n-1];
+
+        }
+
+        function b() {
+            n--;
+            if(n<=0){
+                n=10;
+            }
+            abc.src = bcd[n-1];
+
+        }
+    </script>
+</body>
+
+</html>
